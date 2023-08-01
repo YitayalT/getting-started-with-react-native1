@@ -4,6 +4,7 @@ import { View, StyleSheet, TextInput, FlatList, Button } from "react-native";
 import GoalItem from "./components/GoalItem";
 import GoalInput from "./components/GoalInput";
 export default function App() {
+
   const [courseGoals, setCourseGoals] = useState([]);
   const [modalIsVisible, setModalIsVisible] = useState(false);
 
@@ -23,8 +24,6 @@ export default function App() {
       ...currentCourseGoal,
       { text: enteredGoalText, id: Math.random().toString() },
     ]);
-
-    endAddGoalHandler();
   }
 
   // deleting a goal
